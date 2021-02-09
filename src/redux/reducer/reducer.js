@@ -1,5 +1,5 @@
 const initialState = {
-  haha: false,
+  haha: "false",
 };
 
 const reducer = (state = initialState, action) => {
