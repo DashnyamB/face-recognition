@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  padding-left: 5px;
+  padding-right: 5px;
+  @include atSmall {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include atMedium {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}

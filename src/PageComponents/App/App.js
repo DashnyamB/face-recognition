@@ -1,7 +1,9 @@
-import "./App.css";
+import "./style.scss";
 
 function App() {
-  return <div className="App">haha</div>;
+  return <div className="app">haha
+  
+  </div>;
 }
 
 export default App;

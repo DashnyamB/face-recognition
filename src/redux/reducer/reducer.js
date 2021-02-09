@@ -1,4 +1,4 @@
-initialState = {
+const initialState = {
   haha: false,
 };
 

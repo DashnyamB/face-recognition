@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./index.scss";
 import App from "./PageComponents/App/App";
 import { createStore } from "redux";
-import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { Provider, connect } from "react-redux";
+import { BrowserRouter, withRouter } from "react-router-dom";
 import reducer from "./redux/reducer/reducer";
 
 const store = createStore(reducer);
