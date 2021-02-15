@@ -1,0 +1,17 @@
+@import "../../../css/style.scss";
+
+.Add {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  input {
+    outline: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  textarea {
+    height: 10rem;
+    outline: none;
+  }
+}

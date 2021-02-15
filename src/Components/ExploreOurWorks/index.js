@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import Button from "../Button";
 import ExploreWorkItem from "../ExploreWorkItem";
 import bgImg from "../../assets/image/background.jpg";
 
 import "./style.scss";
+import axios from "axios";
+import { db } from "../../firebase";
 const ExploreOurWorks = (props) => {
+  const [data, setData] = useState({});
+
+  useEffect(() => {}, [data]);
+
+  const sendData = () => {
+    db.collection("filters").onSnapshot((snapshot) => {
+      setData(snapshot.docs.map((doc) => doc.data()));
+    });
+  };
   return (
     <section
       style={{

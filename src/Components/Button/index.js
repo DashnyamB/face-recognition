@@ -1,7 +1,11 @@
 import React from "react";
 import "./style.scss";
 const Button = (props) => {
-  return <button className="button">{props.text}</button>;
+  return (
+    <button onClick={props.onClick} className="button">
+      {props.text}
+    </button>
+  );
 };
 
 export default Button;
