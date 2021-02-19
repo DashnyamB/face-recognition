@@ -14,43 +14,66 @@ const Login = (props) => {
         passError } = props;
     return (
         <div className="login">
-            <div className="loginContainer">
-                <label>User</label>
-                <input
-                    type="text"
-                    required
-                    autoFocus
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)} />
-                <p className="errorMsg">{emailError}</p>
-                <label>Password</label>
-                <input
-                    type="password"
-                    required
-                    autoFocus
-                    value={pass}
-                    onChange={(e) => setPass(e.target.value)} />
-                <p className="errorMsg">{passError}</p>
-                <div className="btnContainer">
-                    {account ? (
-                        <>
-                            <button onClick={handleLogin}>Sign in</button>
+            {account ? (
+                <>
+                    <div className="loginContainer">
+                        <label>Login</label>
+                        <label>User</label>
+                        <input
+                            type="text"
+                            required
+                            autoFocus
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)} />
+                        <p className="errorMsg">{emailError}</p>
+                        <label>Password</label>
+                        <input
+                            type="password"
+                            required
+                            autoFocus
+                            value={pass}
+                            onChange={(e) => setPass(e.target.value)} />
+                        <p className="errorMsg">{passError}</p>
+                        <div className="btnContainer">
+                            <button onClick={handleLogin}>Log in</button>
                             <p>
                                 Don't have an account ?
-                                <span onClick={() => setAccount(!account)}>Sign up</span>
+                            <span onClick={() => setAccount(!account)}>Sign up</span>
                             </p>
-                        </>
-                    ) : (
-                            <>
+                        </div>
+                    </div>
+
+                </>
+            ) : (
+                    <>
+                        <div className="loginContainer">
+                            <label>Create Account</label>
+                            <label>User</label>
+                            <input
+                                type="text"
+                                required
+                                autoFocus
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)} />
+                            <p className="errorMsg">{emailError}</p>
+                            <label>Password</label>
+                            <input
+                                type="password"
+                                required
+                                autoFocus
+                                value={pass}
+                                onChange={(e) => setPass(e.target.value)} />
+                            <p className="errorMsg">{passError}</p>
+                            <div className="btnContainer">
                                 <button onClick={handleSignUp}>Sign up</button>
                                 <p>
                                     Have an account ?
-                                    <span onClick={() => setAccount(!account)} > Sign in</span>
+                                <span onClick={() => setAccount(!account)} > Log in</span>
                                 </p>
-                            </>
-                        )}
-                </div>
-            </div>
+                            </div>
+                        </div>
+                    </>
+                )}
         </div>
     );
 };

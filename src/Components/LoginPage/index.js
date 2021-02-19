@@ -3,6 +3,7 @@ import Login from "../Login"
 import fire from "../../firebase"
 import "./style.css"
 
+
 const LoginPage = (props) => {
     const [user, setUser] = useState('');
     const [email, setEmail] = useState('');
@@ -25,6 +26,9 @@ const LoginPage = (props) => {
         fire
             .auth()
             .signInWithEmailAndPassword(email, pass)
+            .then(result => {
+                console.log(result);
+            })
             .catch(err => {
                 switch (err.code) {
                     case "auth/invalid-email":
