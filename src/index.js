@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
-
+// import "bulma/css/bulma.css";
 import { createStore, combineReducers } from "redux";
 import { Provider, connect } from "react-redux";
 import { BrowserRouter, withRouter } from "react-router-dom";

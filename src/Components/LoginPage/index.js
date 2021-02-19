@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Login from "../Login"
-import fire from "../../fire"
+import fire from "../../firebase"
 import "./style.css"
 
 
