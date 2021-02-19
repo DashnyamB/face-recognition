@@ -44,7 +44,7 @@ function DataDetails(props) {
   return (
     <div>
       <div className="columns">
-        <div className="column is-one-quarter">
+        <div className="column">
           <figire className="image">
             <img src={data.imgUrl} alt={data.name} />
           </figire>

@@ -8,15 +8,14 @@ import "./style.scss";
 import axios from "axios";
 import { db } from "../../firebase";
 const ExploreOurWorks = (props) => {
-  const [data, setData] = useState({});
+  const [datas, setDatas] = useState([]);
 
-  useEffect(() => {}, [data]);
-
-  const sendData = () => {
+  useEffect(() => {
     db.collection("filters").onSnapshot((snapshot) => {
-      setData(snapshot.docs.map((doc) => doc.data()));
+      setDatas(snapshot.docs.map((doc) => doc.data()));
     });
-  };
+  }, []);
+
   return (
     <section
       style={{
@@ -27,10 +26,9 @@ const ExploreOurWorks = (props) => {
     >
       <h1 className="explore-our-works__title">explore our work</h1>
       <article className="explore-our-works__content">
-        <ExploreWorkItem />
-        <ExploreWorkItem />
-        <ExploreWorkItem />
-        <ExploreWorkItem />
+        {datas.map((data) => (
+          <ExploreWorkItem post={data} />
+        ))}
       </article>
       {/* Button component */}
       <div className="explore-our-works__btn">
