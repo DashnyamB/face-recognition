@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router-dom";
+import Navbar from "../../Components/Navbar";
 import ExploreOurWorks from "../../Components/ExploreOurWorks";
 import LoginPage from "../../Components/LoginPage";
 import Login from "../../Components/LoginPage";
@@ -9,6 +10,7 @@ import "./style.scss";
 function App() {
   return (
     <div className="app">
+      <Navbar />
       <Switch>
         <Route path="/panel" component={AdminPanel} />
         <Route path="/" exact component={HomePage} />

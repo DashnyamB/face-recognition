@@ -1,0 +1,14 @@
+.menu {
+  display: flex;
+  align-items: center;
+
+  & > div {
+    margin-left: 20px;
+    margin-right: 20px;
+    &:hover {
+      cursor: pointer;
+      border-bottom: 2px solid white;
+      transition: 0.3s;
+    }
+  }
+}
