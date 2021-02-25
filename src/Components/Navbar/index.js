@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "../Logo";
-import Menu from "../Menu";
+import Logo from "./Logo";
+import Menu from "./Menu";
 import "./style.scss";
 
 export default function index() {
