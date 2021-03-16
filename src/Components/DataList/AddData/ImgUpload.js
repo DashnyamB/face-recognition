@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import fire, { db, storage } from "../../../firebase";
 import firebase from "firebase";
-import Button from "../../Button";
-import css from "./style.module.scss";
 import { withRouter } from "react-router-dom";
 function ImgUpload(props) {
   const [data, setData] = useState({
@@ -54,21 +52,55 @@ function ImgUpload(props) {
     setData({ ...data, [e.target.name]: e.target.value });
   };
   return (
-    <div className={css.Add}>
-      <input
-        type="text"
-        name="name"
-        placeholder="нэрээ оруулна уу"
-        onChange={handleInfo}
-      />
-      <textarea
-        type="text"
-        name="desc"
-        placeholder="нэрээ оруулна уу"
-        onChange={handleInfo}
-      />
-      <input type="file" onChange={changeHandler} />
-      <Button text="нийтлэх" onClick={handleUpload} />
+    <div>
+      <div className="columns">
+        <div className="column is-half is-offset-one-quarter">
+          <div className="field">
+            <label className="label">Нэр :</label>
+            <div className="control">
+              <input
+                className="input is-primary"
+                name="name"
+                onChange={handleInfo}
+                type="text"
+                placeholder="Нэрээ оруулна уу.."
+              />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">Мэдээлэлээ оруулна уу :</label>
+            <div className="control">
+              <textarea
+                className="textarea is-primary"
+                name="name"
+                onChange={handleInfo}
+                type="desc"
+                placeholder="Мэдээлэлээ оруулна уу  уу.."
+              />
+            </div>
+          </div>
+          <div className="file">
+            <label className="file-label">
+              <input
+                className="file-input"
+                onChange={changeHandler}
+                type="file"
+              />
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">Зургаа оруулна уу…</span>
+              </span>
+            </label>
+          </div>
+          <div className="buttons" style={{ marginTop: "1rem" }}>
+            <button onClick={handleUpload} className="button is-success">
+              Нэмэх
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

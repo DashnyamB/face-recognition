@@ -4,13 +4,10 @@ const ExploreWorkItem = (props) => {
   return (
     <div className="explore-our-works__content__item">
       <figure className="explore-our-works__content__item__img">
-        <img
-          src="https://wehavezeal.com/wp-content/uploads/2018/11/carousel-3.jpg"
-          alt="png"
-        />
+        <img src={props.post.imgUrl} alt={props.post.name} />
       </figure>
       <div className="explore-our-works__content__item__overlay">
-        <h2>Some text...</h2>
+        <h2>{props.post.name}</h2>
       </div>
     </div>
   );

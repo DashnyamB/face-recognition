@@ -1,0 +1,17 @@
+.navbar {
+  background: transparent;
+  height: 80px;
+  display: flex;
+
+  position: sticky;
+  color: white;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  &.active {
+    background-color: #092540;
+    opacity: 0.8;
+  }
+}
