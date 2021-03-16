@@ -12,6 +12,8 @@ function App() {
       <Switch>
         <Route path="/panel" component={AdminPanel} />
         <Route path="/" exact component={HomePage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/"/>
       </Switch>
     </div>
   );

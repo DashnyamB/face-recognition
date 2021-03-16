@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
 const Login = (props) => {
     const {
@@ -35,14 +36,17 @@ const Login = (props) => {
                             onChange={(e) => setPass(e.target.value)} />
                         <p className="errorMsg">{passError}</p>
                         <div className="btnContainer">
-                            <button onClick={handleLogin}>Log in</button>
+                            <button onClick={handleLogin}>
+                                Log in
+                                </button>
                             <p>
                                 Don't have an account ?
-                            <span onClick={() => setAccount(!account)}>Sign up</span>
+                                <span onClick={() => setAccount(!account)}>
+                                    Sign up
+                                </span>
                             </p>
                         </div>
                     </div>
-
                 </>
             ) : (
                     <>
@@ -68,7 +72,9 @@ const Login = (props) => {
                                 <button onClick={handleSignUp}>Sign up</button>
                                 <p>
                                     Have an account ?
-                                <span onClick={() => setAccount(!account)} > Log in</span>
+                                    <span onClick={() => setAccount(!account)} >
+                                        Log in
+                                    </span>
                                 </p>
                             </div>
                         </div>

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Route, Switch, Redirect } from "react-router";
 import Login from "../Login"
+import HomePage from "../../PageComponents/HomePage"
 import fire from "../../firebase"
 import "./style.css"
 
@@ -11,6 +13,8 @@ const LoginPage = (props) => {
     const [emailError, setEmailError] = useState('');
     const [passError, setPassError] = useState('');
     const [account, setAccount] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [userId, setUserId] = useState('');
 
     const clearInputs = () => {
         setEmail('');
@@ -27,7 +31,7 @@ const LoginPage = (props) => {
             .auth()
             .signInWithEmailAndPassword(email, pass)
             .then(result => {
-                console.log(result);
+                setUserId(result.user.uid);
             })
             .catch(err => {
                 switch (err.code) {
@@ -45,6 +49,7 @@ const LoginPage = (props) => {
 
     const handleSignUp = () => {
         clearErrors();
+        setIsLoggedIn(account);
         fire
             .auth()
             .createUserWithEmailAndPassword(email, pass)
@@ -62,6 +67,7 @@ const LoginPage = (props) => {
     }
 
     const handleLogout = () => {
+        setIsLoggedIn(isLoggedIn);
         fire.auth().signOut();
     }
 
@@ -94,7 +100,8 @@ const LoginPage = (props) => {
                 emailError={emailError}
                 passError={passError}
             />
-        </div>
+            {!setUserId && <Redirect to="/" />}
+        </div >
     );
 };
 
