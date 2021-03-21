@@ -1,44 +1,65 @@
-@import '../../css/style.scss';
+@import "../../css/style.scss";
 
-.large-hero{
-    height: 100vh;
+.large-hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  &__content {
     width: 100%;
-    position: relative;
-    &__content{
-        width: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        &__title{
-            text-align: center;
-            color: $white;
-            &>h1{
-                font-family: $lemonMilk;
-                font-size: 4.2rem;
-                width: 100%;
-            }
-            &>h2{
-                font-family: $lemonMilk;
-                font-size: 4rem;
-                width: 100%;
-            }
-        }
-        &>h3{
-            font-size: 1.5rem;
-            font-family: $uniSansLight;
-            font-weight: 200;
-            color: $white;
-            opacity: 0.9;
-            text-align: center;
-            text-transform: uppercase;
-            padding-top: 2rem;
-        }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include atSmall {
+      width: 80%;
     }
-    &__scroll-icon{
-        position: absolute;
-        left: 50%;
-        bottom: 5rem;
-        transform: translateX(-50%);
+    &__title {
+      text-align: center;
+      color: $white;
+      & > h1 {
+        font-family: $lemonMilk;
+        font-size: 1.8rem;
+        width: 100%;
+        @include atSmall {
+          font-size: 3rem;
+        }
+        @include atMedium {
+          font-size: 4.2rem;
+        }
+      }
+      & > h2 {
+        font-family: $lemonMilk;
+        font-size: 1.8rem;
+        width: 100%;
+        @include atSmall {
+          font-size: 3rem;
+        }
+        @include atMedium {
+          font-size: 4rem;
+        }
+      }
     }
+    & > h3 {
+      font-size: 1rem;
+      font-family: $uniSansLight;
+      font-weight: 200;
+      color: $white;
+      opacity: 0.9;
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: 2rem;
+      @include atSmall {
+        font-size: 1.2rem;
+      }
+      @include atMedium {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  &__scroll-icon {
+    position: absolute;
+    left: 50%;
+    bottom: 5rem;
+    transform: translateX(-50%);
+  }
 }
