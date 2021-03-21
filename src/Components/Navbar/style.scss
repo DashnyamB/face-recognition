@@ -1,4 +1,4 @@
-@import '../../css/style.scss';
+@import "../../css/style.scss";
 
 .navbar {
   background: transparent;
@@ -13,7 +13,6 @@
   text-decoration: none;
   text-transform: uppercase;
   &.active {
-    background-color: $primary-color;
-    opacity: 0.8;
+    background-color: rgba(236, 0, 146, 0.1);
   }
 }
