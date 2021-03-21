@@ -10,9 +10,9 @@ import "./style.scss";
 function App() {
   return (
     <div className="app">
-    
       <Switch>
         <Route path="/panel" component={AdminPanel} />
+        <Route path="/login" component={LoginPage} />
         <Route path="/" exact component={HomePage} />
       </Switch>
     </div>
