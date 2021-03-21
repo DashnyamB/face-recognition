@@ -8,6 +8,7 @@
   &__title {
     text-transform: uppercase;
     font-size: 2.5rem;
+    font-family: $lemonMilk;
     color: $white;
     text-align: center;
   }
@@ -17,12 +18,10 @@
     height: auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     column-gap: 2rem;
     row-gap: 2rem;
     @include atMedium {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
     }
   }
   &__btn {
