@@ -5,7 +5,7 @@ import "./style.scss";
 
 export default function index() {
   return (
-    <nav className="navbar active">
+    <nav className="navbar active wrapper">
       <Logo />
       <Menu />
     </nav>
