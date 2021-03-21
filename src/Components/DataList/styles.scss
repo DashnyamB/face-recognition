@@ -1,0 +1,9 @@
+@import "../../css/style.scss";
+
+.data-list {
+  &__title {
+    font-size: 1.1rem;
+    text-align: center;
+    color: $primary-color;
+  }
+}

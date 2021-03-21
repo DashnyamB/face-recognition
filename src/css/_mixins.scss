@@ -1,0 +1,22 @@
+@mixin atSmall {
+  @media (min-width: 520px) {
+    @content;
+  }
+}
+@mixin atMedium() {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+@mixin atlarge {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin sectionPadding {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@mixin boxShadow {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}

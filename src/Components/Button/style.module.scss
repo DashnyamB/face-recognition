@@ -1,0 +1,15 @@
+@import "../../css/style.scss";
+
+.Button {
+  background-color: $secondary-color;
+  width: 20rem;
+  transition: 0.4s ease;
+  background: #e4458d;
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 1.5rem 3rem;
+  text-transform: uppercase;
+  &:hover {
+    background: #df267a;
+  }
+}
