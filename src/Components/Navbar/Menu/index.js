@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-export default function index() {
+import MenuItem from "../../MenuItem";
+import { Link } from "react-router-dom";
+
+export default function Menu() {
+  const [menus, setMenu] = useState(["home", "services", "team", "contact us"]);
   return (
     <div className="menuf">
+      {menus.map((menu) => {
+        return <MenuItem key={menu} text={menu} />;
+      })}
       <div className="menuf__icon">
-        <FontAwesomeIcon icon={faUser} />
+        <Link to="/login">
+          <FontAwesomeIcon
+            icon={faUser}
+            style={{ color: "#fff", fontSize: "1.5rem" }}
+          />
+        </Link>
       </div>
-      <div className="menuf__item">Home desu</div>
-      <div className="menuf__item">Services</div>
-      <div className="menuf__item">Team</div>
-      <div className="menuf__item">Contact Us</div>
     </div>
   );
 }
