@@ -4,6 +4,8 @@ import Login from "../Login";
 import HomePage from "../../PageComponents/HomePage";
 import fire from "../../firebase";
 import "./style.scss";
+import { connect } from "react-redux";
+import * as actions from "../../redux/actions/LoginRegisterAction";
 
 const LoginPage = (props) => {
     const [user, setUser] = useState("");
@@ -25,27 +27,9 @@ const LoginPage = (props) => {
     };
 
     const handleLogin = () => {
-        clearErrors();
-        fire
-            .auth()
-            .signInWithEmailAndPassword(email, pass)
-            .then((result) => {
-                console.log(result.user.uid);
-            })
-            .catch((err) => {
-                switch (err.code) {
-                    case "auth/invalid-email":
-                    case "auth/user-disabled":
-                    case "auth/user-not-found":
-                        setEmailError(err.message);
-                        break;
-                    case "auth/wrong-password":
-                        setPassError(err.message);
-                        break;
-                }
-            });
+        props.login(email, pass);
     };
-
+    // sign up
     const handleSignUp = () => {
         clearErrors();
         setIsLoggedIn(account);
@@ -87,7 +71,7 @@ const LoginPage = (props) => {
 
     return (
         <div>
-            {console.log.uid}
+            {console.log("===>", props.user)}
             <Login
                 email={email}
                 setEmail={setEmail}
@@ -100,9 +84,21 @@ const LoginPage = (props) => {
                 emailError={emailError}
                 passError={passError}
             />
-            {!setUserId && <Redirect to="/" />}
+            {props.user.id && <Redirect to="/" />}
         </div>
     );
 };
 
-export default LoginPage;
+const mapStateToProps = (state) => {
+    return {
+        user: state.LoginRegisterReducer.user,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        login: (email, password) => dispatch(actions.Login(email, password)),
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);
