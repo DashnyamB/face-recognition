@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from "react-router";
 import Login from "../Login";
 import HomePage from "../../PageComponents/HomePage";
 import fire from "../../firebase";
-import "./style.css";
+import "./style.scss";
 
 const LoginPage = (props) => {
     const [user, setUser] = useState("");
