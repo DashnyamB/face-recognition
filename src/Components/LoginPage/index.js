@@ -30,7 +30,7 @@ const LoginPage = (props) => {
             .auth()
             .signInWithEmailAndPassword(email, pass)
             .then((result) => {
-                setUserId(result.user.uid);
+                console.log(result.user.uid);
             })
             .catch((err) => {
                 switch (err.code) {
@@ -87,6 +87,7 @@ const LoginPage = (props) => {
 
     return (
         <div>
+            {console.log.uid}
             <Login
                 email={email}
                 setEmail={setEmail}
