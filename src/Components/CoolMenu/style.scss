@@ -1,0 +1,10 @@
+@import "../../css/style.scss";
+.cool-menu {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  z-index: 100;
+  top: -100vh;
+  left: 0;
+}
