@@ -3,6 +3,7 @@ import CoolMenu from "../../Components/CoolMenu";
 import ExploreOurWorks from "../../Components/ExploreOurWorks";
 import Footer from "../../Components/Footer";
 import LargeHero from "../../Components/LargeHero";
+import MeetTeam from "../../Components/MeetTeam";
 import Navbar from "../../Components/Navbar";
 
 function HomePage() {
@@ -12,6 +13,7 @@ function HomePage() {
       <CoolMenu />
       <LargeHero />
       <ExploreOurWorks />
+      <MeetTeam />
       <Footer />
     </div>
   );
