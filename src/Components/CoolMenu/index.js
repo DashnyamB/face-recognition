@@ -13,8 +13,8 @@ const CoolMenu = (props) => {
   if (cont && card) {
     cont.addEventListener("mousemove", (e) => {
       let xAxis = (window.innerWidth / 2 - e.pageX) / 26;
-      let yAxis = (window.innerHeight / 2 - e.pageY) / 26;
-      card.style.transform = `rotateY(${yAxis}deg) rotateX(${xAxis}deg)`;
+      //let yAxis = (window.innerHeight / 2 - e.pageY) / 26;
+      card.style.transform = `rotateY(${xAxis}deg)`;
     });
   }
 
