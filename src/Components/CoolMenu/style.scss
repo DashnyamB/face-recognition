@@ -1,4 +1,5 @@
 @import "../../css/style.scss";
+
 .cool-menu {
   width: 100%;
   height: 0;
@@ -6,7 +7,7 @@
   position: absolute;
   z-index: 100;
   top: -100vh;
-
+  opacity: 0.8;
   left: 0;
   transition: all 0.3s ease;
 
@@ -14,4 +15,22 @@
     height: 100vh;
     top: 0;
   }
+}
+.containz {
+  display: flex;
+  background-color: black;
+  width: 80%;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.containz--cool {
+  width: 96%;
+  margin-top: 10vh;
+  height: 100%;
+  background-color: aqua;
+}
+.x {
+  float: right;
+  right: 0;
 }

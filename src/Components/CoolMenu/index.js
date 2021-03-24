@@ -3,14 +3,32 @@ import { connect } from "react-redux";
 import "./style.scss";
 import * as actions from "../../redux/actions/CoolMenuAction";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAdjust } from "@fortawesome/free-solid-svg-icons";
+import { faTimes, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 const CoolMenu = (props) => {
   const toggleCoolMenu = () => {
     props.toggleCoolMenu();
   };
+  const card = document.querySelector(".containz--cool");
+  const cont = document.querySelector(".containz");
+  if (cont && card) {
+    cont.addEventListener("mousemove", (e) => {
+      let xAxis = (window.innerWidth / 2 - e.pageX) / 26;
+      let yAxis = (window.innerHeight / 2 - e.pageY) / 26;
+      card.style.transform = `rotateY(${yAxis}deg) rotateX(${xAxis}deg)`;
+    });
+  }
+
   return (
     <div className={`cool-menu ${props.show ? "cool-menu--show" : ""}`}>
-      <FontAwesomeIcon onClick={toggleCoolMenu} icon={faAdjust} color="#fff" />
+      <FontAwesomeIcon
+        onClick={toggleCoolMenu}
+        icon={faTimes}
+        style={{ color: "#fff", fontSize: "1.5rem" }}
+        className="x"
+      />
+      <div className="containz">
+        <div className="containz--cool"></div>
+      </div>
     </div>
   );
 };
