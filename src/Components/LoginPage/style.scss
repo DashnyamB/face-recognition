@@ -4,11 +4,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0;
   width: 100%;
   min-height: 100vh;
   background: $gray-bg;
   display: flex;
+  &__video{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    z-index: 0; 
+    width: 100%;
+  }
   & > h1{
     font-family: $lemonMilk;
     font-weight: bolder;
@@ -17,6 +24,7 @@
     text-align: center;
     color: $black;
     margin: 15px 0px;
+    z-index: 1;
   }
   & > h2{
     font-family: $lemonMilk;

@@ -1,4 +1,5 @@
 import React from "react";
+import video from "../../assets/video/Background.mp4"
 import { Route } from "react-router-dom";
 
 const Login = (props) => {
@@ -16,6 +17,14 @@ const Login = (props) => {
   } = props;
   return (
     <div className="login">
+      <video
+        autoPlay
+        muted
+        loop
+        className="login__video"
+      >
+        <source src={video} type="video/mp4"/>
+      </video>
       <h1>TMT</h1>
       <div className="login__container">
         {account? (<h2>Welcome back!</h2>) : (<h2>Let's go</h2>)}
