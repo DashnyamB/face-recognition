@@ -1,6 +1,10 @@
 import React from "react";
 import video from "../../assets/video/Background.mp4"
+import "../../css/style.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Route } from "react-router-dom";
+import { faEnvelopeOpen } from "@fortawesome/free-regular-svg-icons";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
 
 const Login = (props) => {
   const {
@@ -30,6 +34,10 @@ const Login = (props) => {
         {account? (<h2>Welcome back!</h2>) : (<h2>Let's go</h2>)}
         <div>
           <label>Email</label>
+          <FontAwesomeIcon
+            icon={faEnvelopeOpen}
+            id="icon"
+          />
           <input
             type="text"
             required
@@ -42,6 +50,10 @@ const Login = (props) => {
         </div>
         <div>
           <label>Password</label>
+          <FontAwesomeIcon
+            icon={faLock}
+            id="icon"
+          />
           <input
             type="password"
             required
@@ -50,7 +62,7 @@ const Login = (props) => {
             value={pass}
             onChange={(e) => setPass(e.target.value)}
           />
-          <p className="errorMsg">{passError}</p>
+          <p className="login__container__errorMsg">{passError}</p>
         </div>
         <div>
           <a>Forgot password?</a>
@@ -60,12 +72,12 @@ const Login = (props) => {
             <button onClick={handleLogin}>Continue</button>
             <p>
               Don't have an account ?
-            <span onClick={() => setAccount(!account)}>Sign up</span>
+              <span onClick={() => setAccount(!account)}>Sign up</span>
             </p>
           </div>
         ) : (
           <div className="login__container__btnContainer">
-            <button onClick={handleSignUp}>Sign up</button>
+            <button onClick={handleSignUp}>Join with us</button>
             <p>
               Have an account ?
               <span onClick={() => setAccount(!account)}>Log in</span>
