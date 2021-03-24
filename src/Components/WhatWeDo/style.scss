@@ -1,0 +1,83 @@
+@import "../../css/style.scss";
+
+.what-we-do {
+  @include sectionPadding;
+  padding-bottom: 10rem !important;
+  text-align: center;
+  position: relative;
+  &__horizontal-line {
+    width: 3px;
+    height: 3rem;
+    background-color: $black;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateY(-50%);
+  }
+
+  & > h1 {
+    font-family: $lemonMilk;
+    font-size: 2rem;
+    color: $black;
+    @include atSmall {
+      font-size: 2.5rem;
+    }
+    @include atlarge {
+      font-size: 3rem;
+    }
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+    align-items: baseline;
+    @include atlarge {
+      row-gap: 3.5rem;
+      column-gap: 3.5rem;
+    }
+    & > div {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      & > figure {
+        align-self: center;
+        width: 50%;
+        height: 100%;
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+        @include atSmall {
+          width: 40%;
+        }
+        @include atlarge {
+          width: 30%;
+        }
+      }
+      & > h1 {
+        font-family: $lemonMilk;
+        font-size: 1rem;
+        color: $black;
+        padding: 1rem 0;
+        @include atSmall {
+          font-size: 1.5rem;
+        }
+        @include atlarge {
+          font-size: 2rem;
+        }
+      }
+      & > p {
+        font-family: $trendex;
+        font-size: 0.8rem;
+        @include atSmall {
+          font-size: 1rem;
+        }
+        @include atlarge {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
