@@ -1,10 +1,5 @@
-export const coolMenuShow = () => {
+export const toggleMenuShow = () => {
   return {
-    type: "SHOW_COOL_MENU",
-  };
-};
-export const coolMenuHide = () => {
-  return {
-    type: "HIDE_COOL_MENU",
+    type: "TOGGLE_COOL_MENU",
   };
 };

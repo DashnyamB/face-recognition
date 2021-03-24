@@ -3,10 +3,14 @@ import Logo from "./Logo";
 import Menu from "./Menu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import * as actions from "../../redux/actions/CoolMenuAction";
 import "./style.scss";
+import { connect } from "react-redux";
 
-function Navbar() {
-  function showCoolMenu() {}
+function Navbar(props) {
+  function showCoolMenu() {
+    props.toggleCoolMenu();
+  }
   return (
     <nav className="navbar active wrapper">
       <Logo />
@@ -24,6 +28,12 @@ function Navbar() {
 const mapStateToProps = (state) => {
   return {
     coolMenuShow: state.coolMenuReducer.coolMenuShow,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    toggleCoolMenu: () => dispatch(actions.toggleMenuShow()),
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

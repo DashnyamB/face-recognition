@@ -4,10 +4,9 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case "SHOW_COOL_MENU":
-      return { ...state, coolMenuShow: true };
-    case "HIDE_COOL_MENU":
-      return { ...state, coolMenuShow: false };
+    case "TOGGLE_COOL_MENU":
+      return { ...state, coolMenuShow: !state.coolMenuShow };
+
     default:
       return state;
   }
