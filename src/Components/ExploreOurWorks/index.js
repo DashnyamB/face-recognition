@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import Button from "../Button";
 import ExploreWorkItem from "../ExploreWorkItem";
-import bgImg from "../../assets/image/background.jpg";
+import bgImg from "../../assets/image/explore-bg.jpg";
 
 import "./style.scss";
 import axios from "axios";
