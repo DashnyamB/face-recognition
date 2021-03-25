@@ -8,15 +8,15 @@ const MeetTeam = () => {
         <h3>#TeamMatrix</h3>
         <h2>
           We are students of National University of Mongolia, majoring in
-          information technology
+          Information Technology
         </h2>
         <div className="meet-team__content__up-line"></div>
         <h3>#TeamMembers</h3>
         <div className="meet-team__content__members">
-          <p>Dashnyam Bayarsaikhan, Information technology</p>
-          <p>Sainzolboo Anujin, Information technology</p>
-          <p>Ganbayar Bayanmunkh, Information technology</p>
-          <p>Gantug Gangerel, Information technology</p>
+          <p>Dashnyam Bayarsaikhan</p>
+          <p>Sainzolboo Anujin</p>
+          <p>Ganbayar Bayanmunkh</p>
+          <p>Gantug Gangerel</p>
         </div>
         <hr />
         <h3>#lifeatmatrix</h3>

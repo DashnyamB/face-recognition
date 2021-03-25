@@ -66,14 +66,14 @@
     }
     &__members {
       font-family: $trendex;
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 700;
       color: $black;
       & > p {
         display: block;
       }
       @include atlarge {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
     }
     & > hr {
