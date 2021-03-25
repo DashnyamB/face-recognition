@@ -1,4 +1,5 @@
 import React from "react";
+import AboutUs from "../../Components/AboutUs";
 import CoolMenu from "../../Components/CoolMenu";
 import ExploreOurWorks from "../../Components/ExploreOurWorks";
 import Footer from "../../Components/Footer";
@@ -13,6 +14,7 @@ function HomePage() {
       <Navbar />
       <CoolMenu />
       <LargeHero />
+      <AboutUs />
       <WhatWeDo />
       <ExploreOurWorks />
       <MeetTeam />

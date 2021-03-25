@@ -10,7 +10,7 @@ const MeetTeam = () => {
           We are students of National University of Mongolia, majoring in
           Information Technology
         </h2>
-        <div className="meet-team__content__up-line"></div>
+        <div className="up-line"></div>
         <h3>#TeamMembers</h3>
         <div className="meet-team__content__members">
           <p>Dashnyam Bayarsaikhan</p>
