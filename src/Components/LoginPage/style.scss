@@ -150,6 +150,10 @@
           font-size: 1rem;
         }
       }
+      & > button:active{
+        background-color: $primary-color;
+        transform: translateY(1px);
+      }
       & > p{
         margin: 0.875rem 0 0 0;
         text-align: right;

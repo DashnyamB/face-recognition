@@ -56,24 +56,16 @@
         font-size: 2rem;
       }
     }
-    &__up-line {
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
-      width: 1.5px;
-      height: 3rem;
-      align-self: center;
-      background-color: $black;
-    }
     &__members {
       font-family: $trendex;
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 700;
       color: $black;
       & > p {
         display: block;
       }
       @include atlarge {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
     }
     & > hr {

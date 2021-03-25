@@ -35,7 +35,7 @@ const Login = (props) => {
               fontSize: "0.9rem",
               position: "absolute",
               top: "50%",
-              left: "1%",
+              left: "3%",
               transform: "translateY(50%)",
             }}
           />
@@ -58,7 +58,7 @@ const Login = (props) => {
               fontSize: "0.9rem",
               position: "absolute",
               top: "50%",
-              left: "1%",
+              left: "3%",
               transform: "translateY(50%)",
             }}
           />
