@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../../assets/video/Background.mp4"
+import video from "../../assets/video/Background.mp4";
 import "../../css/style.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Route } from "react-router-dom";
@@ -21,22 +21,24 @@ const Login = (props) => {
   } = props;
   return (
     <div className="login">
-      <video
-        autoPlay
-        muted
-        loop
-        className="login__video"
-      >
-        <source src={video} type="video/mp4"/>
+      <video autoPlay muted loop className="login__video">
+        <source src={video} type="video/mp4" />
       </video>
       <h1>TMT</h1>
       <div className="login__container">
-        {account? (<h2>Welcome back!</h2>) : (<h2>Let's go</h2>)}
-        <div>
+        {account ? <h2>Welcome back!</h2> : <h2>Let's go</h2>}
+        <div style={{ position: "relative" }}>
           <label>Email</label>
           <FontAwesomeIcon
             icon={faEnvelopeOpen}
             id="icon"
+            style={{
+              fontSize: "0.9rem",
+              position: "absolute",
+              top: "50%",
+              left: "1%",
+              transform: "translateY(50%)",
+            }}
           />
           <input
             type="text"
@@ -48,11 +50,18 @@ const Login = (props) => {
           />
           <p className="login__container__errorMsg">{emailError}</p>
         </div>
-        <div>
+        <div style={{ position: "relative" }}>
           <label>Password</label>
           <FontAwesomeIcon
             icon={faLock}
             id="icon"
+            style={{
+              fontSize: "0.9rem",
+              position: "absolute",
+              top: "50%",
+              left: "1%",
+              transform: "translateY(50%)",
+            }}
           />
           <input
             type="password"
