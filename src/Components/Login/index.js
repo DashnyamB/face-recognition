@@ -2,7 +2,6 @@ import React from "react";
 import video from "../../assets/video/Background.mp4";
 import "../../css/style.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Route } from "react-router-dom";
 import { faEnvelopeOpen } from "@fortawesome/free-regular-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 

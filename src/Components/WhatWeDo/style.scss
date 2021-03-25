@@ -15,15 +15,19 @@
     transform: translateY(-50%);
   }
 
-  & > h1 {
+  &__header {
     font-family: $lemonMilk;
     font-size: 2rem;
     color: $black;
+    margin-bottom: -6rem;
+    padding-bottom: 0;
     @include atSmall {
       font-size: 2.5rem;
+      margin-bottom: -2rem;
     }
     @include atlarge {
       font-size: 3rem;
+      margin-bottom: 4rem;
     }
   }
   &__content {

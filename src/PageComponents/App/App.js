@@ -7,8 +7,23 @@ import AdminPanel from "../AdminPanel";
 import HomePage from "../HomePage";
 import "./style.scss";
 import { useEffect } from "react";
+import fire from "../../firebase";
+import * as actions from "../../redux/actions/LoginRegisterAction";
+import { connect } from "react-redux";
 
-function App() {
+function App(props) {
+  useEffect(async () => {
+    await fire.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        props.autoLogin(user);
+      }
+    });
+
+    return () => {
+      const userData = {};
+      props.autoLogin(userData);
+    };
+  }, []);
   return (
     <div className="app">
       <Switch>
@@ -20,4 +35,9 @@ function App() {
   );
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    autoLogin: (userData) => dispatch(actions.loginSuccess(userData)),
+  };
+};
+export default connect(null, mapDispatchToProps)(App);

@@ -9,12 +9,7 @@ export const Login = (email, password) => {
       .signInWithEmailAndPassword(email, password)
       .then((response) => {
         // console.log(response.user);
-        const user = {
-          email: response.user.email,
-          id: response.user.uid,
-        };
-        localStorage.setItem("userId", user.id);
-        dispatch(loginSuccess(user));
+        dispatch(loginSuccess(response.user));
       })
       .catch((err) => {
         dispatch(loginError(err.message));
