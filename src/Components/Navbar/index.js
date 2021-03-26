@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "./Logo";
 import Menu from "./Menu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,6 +11,15 @@ function Navbar(props) {
   function showCoolMenu() {
     props.toggleCoolMenu();
   }
+  useEffect(() => {
+    const navbar = document.querySelector(".navbar");
+    if (navbar) {
+      window.addEventListener("scroll"=> {
+        console.log();
+      });
+    }
+    return () => {};
+  }, []);
   return (
     <nav className="navbar active wrapper">
       <Logo />
