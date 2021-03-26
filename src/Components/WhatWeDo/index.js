@@ -30,13 +30,13 @@ const WhatWeDo = () => {
       img:
         "https://firebasestorage.googleapis.com/v0/b/login-c6162.appspot.com/o/Base%20Files%2Fa4.png?alt=media&token=fd530d8a-4f88-49af-b3e3-42c951d11c8d",
       desc: "It's our time to deploy our brand new application to the public.",
-      id: 2,
+      id: 4,
     },
   ]);
   return (
     <section className="what-we-do wrapper">
       <div className="what-we-do__horizontal-line"></div>
-      <h1 className="what-we-do wrapper__header">What we do</h1>
+      <h1 className="what-we-do__header wrapper">What we do</h1>
       <div className="what-we-do__content wrapper">
         {contents.map((content) => {
           return (

@@ -27,7 +27,7 @@ const ExploreOurWorks = (props) => {
       <h1 className="explore-our-works__title">explore our work</h1>
       <article className="explore-our-works__content">
         {datas.map((data) => (
-          <ExploreWorkItem post={data} />
+          <ExploreWorkItem key={data.timestamp} post={data} />
         ))}
       </article>
       {/* Button component */}

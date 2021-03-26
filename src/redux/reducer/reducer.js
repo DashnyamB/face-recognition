@@ -25,6 +25,20 @@ const reducer = (state = initialState, action) => {
         error: action.error,
       };
     }
+    case "LOGOUT_SUCCESS": {
+      return {
+        ...state,
+        loading: false,
+        user: {},
+      };
+    }
+    case "LOGOUT_ERROR": {
+      return {
+        ...state,
+        loading: false,
+        error: "Logout failed!",
+      };
+    }
     case "REGISTER_START": {
       return {};
     }
