@@ -13,11 +13,11 @@ function Navbar(props) {
   }
   useEffect(() => {
     const navbar = document.querySelector(".navbar");
-    if (navbar) {
-      window.addEventListener("scroll"=> {
-        console.log();
-      });
-    }
+    //if (navbar) {
+      //window.addEventListener("scroll"=> {
+        //console.log();
+      //});
+    //}
     return () => {};
   }, []);
   return (
