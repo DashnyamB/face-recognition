@@ -1,86 +1,85 @@
 @import "../../css/style.scss";
 
-.about-us{
-    @include sectionPadding;
-    padding-bottom: 5rem !important;
-    background-color: $gray-bg;
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    & > h1{
-        padding: inherit;
-        font-family: $trendex;
-        text-transform: uppercase;
-        font-size: 1.6rem;
-        width: 100%;
-        @include atSmall {
-            font-size: 2.3rem;
-        }
-        @include atMedium {
-            font-size: 3.5rem;
-        }
+.about-us {
+  @include sectionPadding;
+  padding-bottom: 5rem !important;
+  background-color: $gray-bg;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  & > h1 {
+    padding: inherit;
+    font-family: $trendex;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    width: 100%;
+    @include atSmall {
+      font-size: 2.3rem;
     }
-    & > h2 {
-        align-self: center;
-        width: 100%;
-        font-size: 1.3rem;
-        margin: 3rem 0;
-        @include atSmall {
-            width: 70%;
-            font-size: 1.5rem;
-        }
-        @include atMedium {
-            width: 70%;
-            font-size: 1.7rem;
-        }
-        @include atlarge {
-            width: 60%;
-            font-size: 2rem;
-        }
+    @include atMedium {
+      font-size: 3.5rem;
     }
-    & > p{
-        width: 100%;
-        align-self: center;
-        font-size: 1rem;
-        font-family: $trendex;
-        color: $black;
-        margin-bottom: 5rem;
-        & > p {
-            display: block;
-        }
-        @include atSmall{
-            width: 70%;
-        }
-        @include atlarge {
-            font-size: 1.3rem;
-        }
+  }
+  & > h2 {
+    align-self: center;
+    width: 100%;
+    font-size: 1.3rem;
+    margin: 3rem 0;
+    @include atSmall {
+      width: 70%;
+      font-size: 1.5rem;
     }
-    & > button{
-        align-self: center;
-        margin-bottom: 3rem;
-        background-color: transparent;
-        border-color: $primary-color;
-        border-radius: 10px;
-        width: 35%;
-        padding: 1rem 0;
-        letter-spacing: 1px;
-        font-size: 0.75rem;
-        color: $primary-color;
-        transition: all 400ms ease-in-out;
-        cursor: pointer;
-        @include atSmall{
-            font-size: 0.875rem;
-            width: 27.5%;
-        }
-        @include atMedium{
-            width: 20%;
-            font-size: 1rem;
-        }
+    @include atMedium {
+      width: 70%;
+      font-size: 1.7rem;
     }
-    & > button:hover{
-        background-color: $primary-color;
-        color: $white;
-        border: none;
+    @include atlarge {
+      width: 60%;
+      font-size: 2rem;
     }
+  }
+  & > p {
+    width: 100%;
+    align-self: center;
+    font-size: 1rem;
+    font-family: $trendex;
+    color: $black;
+    margin-bottom: 5rem;
+    & > p {
+      display: block;
+    }
+    @include atSmall {
+      width: 70%;
+    }
+    @include atlarge {
+      font-size: 1.3rem;
+    }
+  }
+  & > button {
+    align-self: center;
+    margin-bottom: 3rem;
+    background-color: transparent;
+    border-color: $primary-color;
+    border-radius: 10px;
+    width: 35%;
+    padding: 1rem 0;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    color: $primary-color;
+    transition: all 400ms ease-in-out;
+    cursor: pointer;
+    @include atSmall {
+      font-size: 0.875rem;
+      width: 27.5%;
+    }
+    @include atMedium {
+      width: 20%;
+      font-size: 1rem;
+    }
+  }
+  & > button:hover {
+    background-color: $primary-color;
+    color: $white;
+  }
 }
