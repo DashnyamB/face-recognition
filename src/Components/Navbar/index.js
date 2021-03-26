@@ -13,25 +13,45 @@ function Navbar(props) {
   }
   useEffect(() => {
     const navbar = document.querySelector(".navbar");
+    const navbarBreakPoint = 300;
+    let currentY;
     if (navbar) {
       window.addEventListener("scroll", () => {
-        console.log(navbar.children);
-        if (window.scrollY > 100) {
-          for (let i = 0; i < navbar.children.length; i++) {
-            navbar.children.item(i).style.display = "none";
-          }
-        } else {
-          for (let i = 0; i < navbar.children.length; i++) {
-            navbar.children.item(i).style.display = "flex";
-          }
-        }
         navbar.style.backgroundColor = `rgba(236, 0, 146, ${
-          window.scrollY / 150
+          window.scrollY / navbarBreakPoint === 0
+            ? 0.1
+            : window.scrollY / navbarBreakPoint
         })`;
-        navbar.classList.toggle("navbar--hide", window.scrollY > 150);
+        navbar.classList.toggle(
+          "navbar--hide",
+          window.scrollY > navbarBreakPoint
+        );
+
+        navbar.addEventListener("mouseover", () => {
+          if (window.scrollY) {
+            navbar.classList.remove("navbar--hide");
+          }
+        });
+        navbar.addEventListener("mouseout", () => {
+          if (window.scrollY > navbarBreakPoint) {
+            navbar.classList.add("navbar--hide");
+          }
+        });
+
+        console.log(currentY, "===", window.scrollY);
+        if (window.scrollY < currentY) {
+          navbar.classList.remove("navbar--hide");
+        }
+        currentY = window.scrollY;
       });
     }
-    return () => {};
+    return () => {
+      window.removeEventListener("scroll");
+      if (navbar) {
+        navbar.removeEventListener("mouseout");
+        navbar.removeEventListener("mouseover");
+      }
+    };
   }, []);
   return (
     <nav className="navbar active wrapper">

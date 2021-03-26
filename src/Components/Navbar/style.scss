@@ -15,9 +15,10 @@
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s ease-in;
+  object-fit: cover;
 
   &--hide {
-    height: 0;
+    top: -70px;
   }
 
   &.active {

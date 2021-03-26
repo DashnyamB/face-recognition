@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import AboutUs from "../../Components/AboutUs";
 import CoolMenu from "../../Components/CoolMenu";
 import ExploreOurWorks from "../../Components/ExploreOurWorks";
@@ -7,11 +7,18 @@ import LargeHero from "../../Components/LargeHero";
 import MeetTeam from "../../Components/MeetTeam";
 import Navbar from "../../Components/Navbar";
 import WhatWeDo from "../../Components/WhatWeDo";
-
+import "./style.scss";
 function HomePage() {
+  const navbarRef = useRef();
+  useEffect(() => {
+    return () => {};
+  }, []);
   return (
     <div>
-      <Navbar />
+      <div ref={navbarRef}>
+        <Navbar />
+      </div>
+
       <CoolMenu />
       <LargeHero />
       <AboutUs />
