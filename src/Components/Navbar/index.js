@@ -18,9 +18,7 @@ function Navbar(props) {
     if (navbar) {
       window.addEventListener("scroll", () => {
         navbar.style.backgroundColor = `rgba(236, 0, 146, ${
-          window.scrollY / navbarBreakPoint === 0
-            ? 0.1
-            : window.scrollY / navbarBreakPoint
+          window.scrollY / navbarBreakPoint
         })`;
         navbar.classList.toggle(
           "navbar--hide",
@@ -46,10 +44,10 @@ function Navbar(props) {
       });
     }
     return () => {
-      window.removeEventListener("scroll");
+      window.removeEventListener("scroll", () => {});
       if (navbar) {
-        navbar.removeEventListener("mouseout");
-        navbar.removeEventListener("mouseover");
+        navbar.removeEventListener("mouseout", () => {});
+        navbar.removeEventListener("mouseover", () => {});
       }
     };
   }, []);
