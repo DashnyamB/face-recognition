@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/faceRecognition/static/css/main.c3070de6.chunk.css",
+    "main.js": "/faceRecognition/static/js/main.70ad8d7d.chunk.js",
+    "main.js.map": "/faceRecognition/static/js/main.70ad8d7d.chunk.js.map",
+    "runtime-main.js": "/faceRecognition/static/js/runtime-main.b27085c5.js",
+    "runtime-main.js.map": "/faceRecognition/static/js/runtime-main.b27085c5.js.map",
+    "static/css/2.49be9a4e.chunk.css": "/faceRecognition/static/css/2.49be9a4e.chunk.css",
+    "static/js/2.67dbeaf3.chunk.js": "/faceRecognition/static/js/2.67dbeaf3.chunk.js",
+    "static/js/2.67dbeaf3.chunk.js.map": "/faceRecognition/static/js/2.67dbeaf3.chunk.js.map",
+    "index.html": "/faceRecognition/index.html",
+    "static/css/2.49be9a4e.chunk.css.map": "/faceRecognition/static/css/2.49be9a4e.chunk.css.map",
+    "static/css/main.c3070de6.chunk.css.map": "/faceRecognition/static/css/main.c3070de6.chunk.css.map",
+    "static/js/2.67dbeaf3.chunk.js.LICENSE.txt": "/faceRecognition/static/js/2.67dbeaf3.chunk.js.LICENSE.txt",
+    "static/media/Background.a6f57c23.mp4": "/faceRecognition/static/media/Background.a6f57c23.mp4",
+    "static/media/style.scss": "/faceRecognition/static/media/Uni Sans Thin.946fca7c.otf",
+    "static/media/cool-menu-background-2560x1600.f63c8d23.jpg": "/faceRecognition/static/media/cool-menu-background-2560x1600.f63c8d23.jpg",
+    "static/media/explore-bg.04b5fea9.jpg": "/faceRecognition/static/media/explore-bg.04b5fea9.jpg",
+    "static/media/largehero-bg.54d25b29.jpg": "/faceRecognition/static/media/largehero-bg.54d25b29.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b27085c5.js",
+    "static/css/2.49be9a4e.chunk.css",
+    "static/js/2.67dbeaf3.chunk.js",
+    "static/css/main.c3070de6.chunk.css",
+    "static/js/main.70ad8d7d.chunk.js"
+  ]
+}
