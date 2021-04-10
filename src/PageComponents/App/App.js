@@ -1,8 +1,5 @@
 import { Route, Switch } from "react-router-dom";
-import Navbar from "../../Components/Navbar";
-import ExploreOurWorks from "../../Components/ExploreOurWorks";
-import LoginPage from "../../Components/LoginPage";
-import Login from "../../Components/LoginPage";
+import LoginPage from "../LoginPage";
 import AdminPanel from "../AdminPanel";
 import HomePage from "../HomePage";
 import "./style.scss";

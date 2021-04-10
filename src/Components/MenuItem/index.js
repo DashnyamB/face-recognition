@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style.scss";
 const MenuItem = (props) => {
   return (
-    <div onClick={props.onClick} className="menuf__item">
-      {props.text}
-    </div>
+    <Link className="menuf__item" to={props.path ? props.path : "/"}>
+      <div onClick={props.onClick}>{props.text}</div>
+    </Link>
   );
 };
 

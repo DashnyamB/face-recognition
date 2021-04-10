@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch, Redirect } from "react-router";
-import Login from "../Login";
-import HomePage from "../../PageComponents/HomePage";
+import Login from "../../Components/Login";
+import HomePage from "../HomePage";
 import fire from "../../firebase";
 import "./style.scss";
 import { connect } from "react-redux";
@@ -53,22 +53,6 @@ const LoginPage = (props) => {
     setIsLoggedIn(isLoggedIn);
     fire.auth().signOut();
   };
-
-  //   const authListener = () => {
-  //     fire.auth().onAuthStateChanged((user) => {
-  //       if (user) {
-  //         clearInputs();
-  //         setUser(user);
-  //       } else {
-  //         setUser("");
-  //       }
-  //     });
-  //   };
-
-  //   useEffect(() => {
-  //     authListener();
-  //     return
-  //   }, []);
 
   return (
     <div>
