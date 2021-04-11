@@ -4,15 +4,21 @@
   background-color: $primary-color;
   width: 20rem;
   font-family: $uniSans;
+  outline: none;
+  cursor: pointer;
   transition: 0.4s ease;
   font-size: 1rem;
   font-weight: 900;
   color: $white;
+  border: none;
   letter-spacing: 3px;
-  border: 1.5px solid $white;
   padding: 1.5rem 3rem;
   text-transform: uppercase;
   &:hover {
     background: #df267a;
   }
+}
+.Outline {
+  border: 2px solid $primary-color;
+  background: transparent;
 }
