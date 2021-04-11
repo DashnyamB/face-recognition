@@ -14,7 +14,7 @@ const LargeHero = (props) => {
       }}
     >
       {props.type === "video" ? (
-        <video autoPlay muted loop className="login__video">
+        <video autoPlay muted loop className="large-hero__video">
           <source src={props.bg} type="video/mp4" />
         </video>
       ) : null}
