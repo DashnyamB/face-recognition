@@ -2,7 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import LoginPage from "../LoginPage";
 import AdminPanel from "../AdminPanel";
 import HomePage from "../HomePage";
-import ForgotPassword from "../ForgotPasswordPage"
+import ForgotPassword from "../ForgotPasswordPage";
 import "./style.scss";
 import { useEffect } from "react";
 import fire from "../../firebase";
@@ -28,9 +28,9 @@ function App(props) {
       <Switch>
         <Route path="/panel" component={AdminPanel} />
         <Route path="/login" component={LoginPage} />
-        <Route path="/filters" exact component={FilterPage} />
-        <Route path="/" exact component={HomePage} />
+        <Route path="/filters" component={FilterPage} />
         <Route path="/forgot-password" component={ForgotPassword} />
+        <Route path="/" component={HomePage} />
       </Switch>
     </div>
   );

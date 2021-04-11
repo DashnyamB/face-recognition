@@ -21,7 +21,7 @@ const store = createStore(reducers, applyMiddleware(...middlewares));
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename="/face">
       <App />
     </BrowserRouter>
   </Provider>,
