@@ -1,7 +1,18 @@
-@import '../../css/style.scss';
+@import "../../css/style.scss";
 
-.menuf__item{
+.menuf__item {
+  color: $white;
+  margin-right: 1rem;
+  position: relative;
+
+  &:hover {
+    color: $gray-text;
+  }
+
+  & > div {
     font-family: $lemonMilk;
     font-weight: 700;
     letter-spacing: 5px;
+    position: relative;
+  }
 }

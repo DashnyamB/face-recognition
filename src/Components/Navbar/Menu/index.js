@@ -17,6 +17,7 @@ function Menu(props) {
       {menus.map((menu) => {
         return <MenuItem key={menu} text={menu} />;
       })}
+      {props.userId ? <MenuItem path="/panel" text="Dashboard" /> : ""}
 
       {!props.userId ? (
         <div className="menuf__icon">

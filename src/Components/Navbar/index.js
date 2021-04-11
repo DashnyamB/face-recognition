@@ -36,7 +36,6 @@ function Navbar(props) {
           }
         });
 
-        console.log(currentY, "===", window.scrollY);
         if (window.scrollY < currentY) {
           navbar.classList.remove("navbar--hide");
         }

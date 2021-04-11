@@ -26,7 +26,7 @@ const Login = (props) => {
       </video>
       <h1>TMT</h1>
       <div className="login__container">
-        {account ? <h2>Welcome back!</h2> : <h2>Let's go</h2>}
+        {!account ? <h2>Welcome back!</h2> : <h2>Let's go</h2>}
         <div style={{ position: "relative" }}>
           <label>Email</label>
           <FontAwesomeIcon
@@ -76,7 +76,7 @@ const Login = (props) => {
         <div>
           <Link to="/forgot-password">Forgot password?</Link>
         </div>
-        {account ? (
+        {!account ? (
           <div className="login__container__btnContainer">
             <button onClick={handleLogin}>Continue</button>
             <p>
