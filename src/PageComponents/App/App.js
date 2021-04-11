@@ -2,7 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import LoginPage from "../LoginPage";
 import AdminPanel from "../AdminPanel";
 import HomePage from "../HomePage";
-import ForgotPassword from "../ForgotPassword"
+import ForgotPassword from "../ForgotPasswordPage"
 import "./style.scss";
 import { useEffect } from "react";
 import fire from "../../firebase";
