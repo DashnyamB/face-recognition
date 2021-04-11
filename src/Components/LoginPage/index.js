@@ -54,22 +54,6 @@ const LoginPage = (props) => {
     fire.auth().signOut();
   };
 
-  //   const authListener = () => {
-  //     fire.auth().onAuthStateChanged((user) => {
-  //       if (user) {
-  //         clearInputs();
-  //         setUser(user);
-  //       } else {
-  //         setUser("");
-  //       }
-  //     });
-  //   };
-
-  //   useEffect(() => {
-  //     authListener();
-  //     return
-  //   }, []);
-
   return (
     <div>
       <Login

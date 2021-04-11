@@ -5,6 +5,7 @@ import LoginPage from "../../Components/LoginPage";
 import Login from "../../Components/LoginPage";
 import AdminPanel from "../AdminPanel";
 import HomePage from "../HomePage";
+import ForgotPassword from "../ForgotPassword"
 import "./style.scss";
 import { useEffect } from "react";
 import fire from "../../firebase";
@@ -30,6 +31,7 @@ function App(props) {
         <Route path="/panel" component={AdminPanel} />
         <Route path="/login" component={LoginPage} />
         <Route path="/" exact component={HomePage} />
+        <Route path="/forgot-password" component={ForgotPassword} />
       </Switch>
     </div>
   );

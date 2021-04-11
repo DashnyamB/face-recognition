@@ -1,6 +1,7 @@
 import React from "react";
 import video from "../../assets/video/Background.mp4";
 import "../../css/style.scss";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeOpen } from "@fortawesome/free-regular-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
@@ -73,7 +74,7 @@ const Login = (props) => {
           <p className="login__container__errorMsg">{passError}</p>
         </div>
         <div>
-          <a>Forgot password?</a>
+          <Link to="/forgot-password">Forgot password?</Link>
         </div>
         {account ? (
           <div className="login__container__btnContainer">
