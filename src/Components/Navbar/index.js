@@ -6,6 +6,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import * as actions from "../../redux/actions/CoolMenuAction";
 import "./style.scss";
 import { connect } from "react-redux";
+import HamburgerMenu from "../HamburgerMenu";
 
 function Navbar(props) {
   function showCoolMenu() {
@@ -56,11 +57,12 @@ function Navbar(props) {
       <div className="navbar__content">
         <Menu />
         <div className="navbar__content__ham">
-          <FontAwesomeIcon
+          <HamburgerMenu onClick={showCoolMenu} />
+          {/* <FontAwesomeIcon
             icon={faBars}
             style={{ color: "#fff", fontSize: "1.5rem" }}
             onClick={showCoolMenu}
-          />
+          /> */}
         </div>
       </div>
     </nav>
