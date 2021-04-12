@@ -11,8 +11,17 @@ const FilterPage = (props) => {
     const videoContaiter = document.querySelector(
       ".filtera-page__content__video"
     );
+    const video = document.getElementById("filter__video");
+    function startVideo() {
+      navigator.mediaDevices
+        .getUserMedia({ video: {} })
+        .then((stream) => {
+          video.srcObject = stream;
+        })
+        .catch((err) => console.log(err));
+    }
 
-    // window.addEventListener("resize", () => {});
+    startVideo();
     function aa() {
       setWidth(window.innerWidth);
     }
@@ -55,15 +64,13 @@ const FilterPage = (props) => {
           </div>
           <div className="filtera-page__content__video">
             <video
+              id="filter__video"
               style={{ backgroundColor: "green" }}
-              className="filtera__video"
               width={width}
               height={height}
               autoPlay={true}
               muted
-            >
-              <source src={vid}></source>
-            </video>
+            ></video>
           </div>
         </div>
       </div>
