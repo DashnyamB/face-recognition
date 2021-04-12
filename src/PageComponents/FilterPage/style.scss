@@ -1,15 +1,16 @@
 @import "../../css/style.scss";
 
-.filter-page {
+.filtera-page {
   background-color: #000;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   &__container {
     width: 90%;
-    height: 90%;
+    min-height: 90%;
     background: transparent;
     border: 4px solid $white;
     border-radius: 50px;
@@ -23,18 +24,35 @@
   }
   &__content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     width: 100%;
     height: 100%;
+    @include atMedium {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "video"
+        "desc";
+      column-gap: 1rem;
+      row-gap: 2rem;
+    }
+    @include atlarge {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "desc video";
+    }
     &__description {
-      display: flex;
-      flex-direction: column;
-      max-height: 80%;
-      justify-content: flex-end;
+      grid-area: desc;
+      display: none;
+      // background-color: $gray-bg;
+      @include atMedium {
+        display: flex;
+        flex-direction: column;
+        max-height: 80%;
+        justify-content: flex-end;
+      }
       &__text {
-        font-size: 1.7rem;
+        font-size: 1rem;
         color: $secondary-color;
-        width: 70%;
+        width: 100%;
         word-wrap: break-word;
         margin-bottom: auto;
       }
@@ -47,16 +65,22 @@
       }
       &__name {
         font-family: $lemonMilk;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         color: $gray-text;
         align-self: center;
       }
     }
     &__video {
-      width: 80%;
-      max-height: 80%;
+      grid-area: video;
+      width: 100%;
+      height: auto;
       background-color: aqua;
       justify-self: center;
+      & > video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 }
