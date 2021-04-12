@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import Button from "../Button";
 import ExploreWorkItem from "../ExploreWorkItem";
 import "./style.scss";
@@ -13,12 +14,18 @@ const Filters = (props) => {
             <h2>{filter.name}</h2>
             <div className="filters__item__content">
               <div className="filters__item__media">
-                <ExploreWorkItem key={filter.name} filter={filter} />
+                <ExploreWorkItem
+                  path={`/filters/${filter.id}`}
+                  key={filter.name}
+                  filter={filter}
+                />
               </div>
               <div className="filters__item__description">
                 <p>{filter.description}</p>
                 <div className="filters__item__description__btn">
-                  <Button type="outline" text="Check it out" />
+                  <Link to={`/filters/${filter.id}`}>
+                    <Button type="outline" text="Check it out" />
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,0 +1,62 @@
+@import "../../css/style.scss";
+
+.filter-page {
+  background-color: #000;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    width: 90%;
+    height: 90%;
+    background: transparent;
+    border: 4px solid $white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  &__logo {
+    justify-self: center;
+    align-self: center;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    &__description {
+      display: flex;
+      flex-direction: column;
+      max-height: 80%;
+      justify-content: flex-end;
+      &__text {
+        font-size: 1.7rem;
+        color: $secondary-color;
+        width: 70%;
+        word-wrap: break-word;
+        margin-bottom: auto;
+      }
+      &__sep {
+        width: 90%;
+        align-self: center;
+        height: 3px;
+        background-color: $white;
+        margin: 2rem 0;
+      }
+      &__name {
+        font-family: $lemonMilk;
+        font-size: 2.5rem;
+        color: $gray-text;
+        align-self: center;
+      }
+    }
+    &__video {
+      width: 80%;
+      max-height: 80%;
+      background-color: aqua;
+      justify-self: center;
+    }
+  }
+}

@@ -1,25 +1,27 @@
 import React from "react";
-import LargeHero from "../../Components/LargeHero";
-import Navbar from "../../Components/Navbar";
-import bg from "../../assets/video/Filterpage.mp4";
-import CoolMenu from "../../Components/CoolMenu";
-import Filters from "../../Components/Filters";
-import Footer from "../../Components/Footer";
-
-const FilterPage = () => {
+import Logo from "../../Components/Navbar/Logo";
+import "./style.scss";
+const FilterPage = (props) => {
+  console.log(props.match.params.id);
   return (
-    <section>
-      <Navbar />
-      <CoolMenu />
-      <LargeHero
-        bg={bg}
-        type="video"
-        title="explore our filters"
-        style="narrow"
-        subtitle="Our website offers you various choice of filters and a lot of choices you can have."
-      />
-      <Filters />
-      <Footer />
+    <section className="filter-page">
+      <div className="filter-page__container">
+        <div className="filter-page__logo">
+          <Logo />
+        </div>
+        <div className="filter-page__content">
+          <div className="filter-page__content__description">
+            <div className="filter-page__content__description__text">
+              ldsal;dkl;akf;kla;skdasdjashdjkhasjkdhsadkjasdsdjkahduiwqydsjka
+            </div>
+            <div className="filter-page__content__description__sep"></div>
+            <div className="filter-page__content__description__name">
+              #TEAMMATRIX
+            </div>
+          </div>
+          <div className="filter-page__content__video"></div>
+        </div>
+      </div>
     </section>
   );
 };

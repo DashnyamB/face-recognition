@@ -21,7 +21,7 @@ const store = createStore(reducers, applyMiddleware(...middlewares));
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter basename="/face">
+    <BrowserRouter basename="/face-recognition">
       <App />
     </BrowserRouter>
   </Provider>,

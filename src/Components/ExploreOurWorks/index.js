@@ -32,7 +32,11 @@ const ExploreOurWorks = (props) => {
       <h1 className="explore-our-works__title">explore our work</h1>
       <article className="explore-our-works__content">
         {props.datas.map((data) => (
-          <ExploreWorkItem key={data.timestamp} filter={data} />
+          <ExploreWorkItem
+            path={`/filters/${data.id}`}
+            key={data.timestamp}
+            filter={data}
+          />
         ))}
       </article>
       {/* Button component */}

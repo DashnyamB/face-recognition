@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import fire from "../../firebase";
 import * as actions from "../../redux/actions/LoginRegisterAction";
 import { connect } from "react-redux";
+import FiltersPage from "../FiltersPage";
 import FilterPage from "../FilterPage";
 
 function App(props) {
@@ -28,7 +29,8 @@ function App(props) {
       <Switch>
         <Route path="/panel" component={AdminPanel} />
         <Route path="/login" component={LoginPage} />
-        <Route path="/filters" component={FilterPage} />
+        <Route path="/filters/:id" component={FilterPage} />
+        <Route path="/filters" component={FiltersPage} />
         <Route path="/forgot-password" component={ForgotPassword} />
         <Route path="/" component={HomePage} />
       </Switch>
