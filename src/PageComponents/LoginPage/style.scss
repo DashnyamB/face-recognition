@@ -1,0 +1,190 @@
+@import "../../css/style.scss";
+
+*{
+  font-family: $trendex;
+}
+.login{
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: $gray-bg;
+  display: flex;
+  &__video{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    z-index: 0; 
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+  }
+  & > h1{
+    font-family: $lemonMilk;
+    font-size: 2rem;
+    text-align: center;
+    color: $black;
+    margin: 15px 0px;
+    z-index: 1;
+    @include atSmall{
+      font-size: 2.5rem;
+    }
+    @include atMedium{
+      font-size: 3.5rem;
+    }
+  }
+  & > h2{
+    font-family: $lemonMilk;
+    font-size: 1rem;
+    text-align: center;
+    color: $black;
+    z-index: 1;
+    margin-top: 30px;
+    @include atSmall{
+      font-size: 1.25rem;
+    }
+    @include atMedium{
+      font-size: 1.5rem;
+    }
+  }
+  &__container{
+    padding: 2rem 3.75rem 1.75rem;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $white;
+    box-shadow: 0 25px 75px rgba(16,30,54,.25);
+    border-radius: 6px;
+    position: relative;
+    opacity: 0.85;
+    @include atSmall{
+      width: 60%;
+    }
+    @include atMedium{
+      width: 45%;
+    }
+    @include atlarge{
+      width: 30%;
+    }
+    & > h2{
+      font-size: 1.5rem;
+      text-align: center;
+      color: $black;
+      margin: 20px 0px;
+      @include atSmall{
+        font-size: 1.75rem;
+      }
+      @include atMedium{
+        font-size: 2rem;
+      }
+    }
+    & > div{
+      margin-bottom: 25px;
+      & > label{
+        font-size: 0.625rem;
+        display: block;
+        color: $black;
+        padding: 0 0 8px 2px;
+        @include atSmall{
+          font-size: 0.75rem;
+        }
+        @include atMedium{
+          font-size: 0.875rem;
+        }
+      }
+      & #icon{
+        font-size: 0.5rem;
+        position: absolute;
+        @include atSmall{
+          font-size: 0.75rem;
+        }
+        @include atMedium{
+          font-size: 1rem;
+        }
+      }
+      & > input{
+        font-size: 0.75rem;
+        width: 100%;
+        border: 1px solid $gray-bg;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 0.5rem 1.25rem 0.5rem 2.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        color: $black;
+        @include atSmall{
+          font-size: 0.875rem;
+        }
+        @include atMedium{
+          font-size: 1rem;
+        }
+      }
+      & > a{
+        font-size: 0.75rem;
+        @include atSmall{
+          font-size: 0.875rem;
+        }
+        @include atMedium{
+          font-size: 1rem;
+        }
+      }
+    }
+    &__btnContainer{
+      width: 100%;
+      & > button{
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        width: 100%;
+        padding: 1rem 0;
+        color: $white;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        background: $primary-color;
+        @include atSmall{
+          font-size: 0.875rem;
+        }
+        @include atMedium{
+          font-size: 1rem;
+        }
+      }
+      & > button:active{
+        background-color: $primary-color;
+        transform: translateY(1px);
+      }
+      & > p{
+        margin: 0.875rem 0 0 0;
+        text-align: right;
+        color: $black;
+        font-size: 0.75rem;
+        @include atSmall{
+          font-size: 0.875rem;
+        }
+        @include atMedium{
+          font-size: 1rem;
+        }
+        & > span{
+          color: $primary-color;
+          margin-left: 0.25rem;
+          cursor: pointer;
+          transition: all 400ms ease-in-out;
+        }
+        & > span:hover{
+          color: $secondary-color;
+        }
+      }
+    }
+    &__errorMsg{
+      color: $secondary-color;
+      font-size: 0.75rem;
+      @include atSmall{
+        font-size: 0.875rem;
+      }
+      @include atMedium{
+        font-size: 1rem;
+      }
+    }
+  }
+}

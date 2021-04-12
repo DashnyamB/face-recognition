@@ -1,24 +1,41 @@
 import React from "react";
 import "./style.scss";
-import bg from "../../assets/image/largehero-bg.jpg";
+
 import ScrollIcon from "../ScrollIcon";
-const LargeHero = () => {
+const LargeHero = (props) => {
   return (
     <section
       className="large-hero"
       style={{
-        backgroundImage: `url("${bg}")`,
+        backgroundImage: `url("${props.bg}")`,
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
       }}
     >
+      {props.type === "video" ? (
+        <video autoPlay muted loop className="large-hero__video">
+          <source src={props.bg} type="video/mp4" />
+        </video>
+      ) : null}
       <div className="large-hero__content">
         <div className="large-hero__content__title">
-          <h1>facial recognition</h1>
-          <h2>team #one</h2>
+          <h1
+            className={`${
+              props.type === "video" ? "large-hero__content__title--narrow" : ""
+            } `}
+          >
+            {props.title}
+          </h1>
+          {props.type != "video" ? <h2>team #one</h2> : null}
         </div>
-        <h3>better performance - responsible - design and development</h3>
+        <h3
+          className={`${
+            props.type === "video" ? "large-hero__content__subtitle--black" : ""
+          } `}
+        >
+          {props.subtitle}
+        </h3>
       </div>
       <div className="large-hero__scroll-icon">
         <ScrollIcon />

@@ -1,0 +1,62 @@
+@import "../../css/style.scss";
+
+.about-us {
+  @include sectionPadding;
+  padding-bottom: 5rem !important;
+  background-color: $gray-bg;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  & > h1 {
+    padding: inherit;
+    font-family: $trendex;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    width: 100%;
+    @include atSmall {
+      font-size: 2.3rem;
+    }
+    @include atMedium {
+      font-size: 3.5rem;
+    }
+  }
+  & > h2 {
+    align-self: center;
+    width: 100%;
+    font-size: 1.3rem;
+    margin: 3rem 0;
+    @include atSmall {
+      width: 70%;
+      font-size: 1.5rem;
+    }
+    @include atMedium {
+      width: 70%;
+      font-size: 1.7rem;
+    }
+    @include atlarge {
+      width: 60%;
+      font-size: 2rem;
+    }
+  }
+  & > p {
+    width: 100%;
+    align-self: center;
+    font-size: 1rem;
+    font-family: $trendex;
+    color: $black;
+    margin-bottom: 5rem;
+    & > p {
+      display: block;
+    }
+    @include atSmall {
+      width: 70%;
+    }
+    @include atlarge {
+      font-size: 1.3rem;
+    }
+  }
+  &__button {
+    text-align: center;
+  }
+}

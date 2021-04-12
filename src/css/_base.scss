@@ -1,16 +1,16 @@
-@font-face{
+@font-face {
   font-family: "lemon-milk";
   src: url("../assets/fonts/LEMONMILK-Regular.otf");
 }
-@font-face{
+@font-face {
   font-family: "trendex";
   src: url("../assets/fonts/TrendexSSi.ttf");
 }
-@font-face{
+@font-face {
   font-family: "uniSans";
   src: url("../assets/fonts/Uni\ Sans\ Heavy.otf");
 }
-@font-face{
+@font-face {
   font-family: "uniSansLight";
   src: url("../assets/fonts/Uni\ Sans\ Thin.otf");
 }
@@ -34,4 +34,17 @@
     padding-left: 50px;
     padding-right: 50px;
   }
+  @include atlarge {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+.up-line{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 1.5px;
+  height: 3rem;
+  align-self: center;
+  background-color: $black;
 }

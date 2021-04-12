@@ -4,6 +4,8 @@
   background-color: $primary-color;
   width: 20rem;
   font-family: $uniSans;
+  outline: none;
+  cursor: pointer;
   transition: 0.4s ease;
   font-size: 1rem;
   font-weight: 900;
@@ -13,5 +15,13 @@
   &:hover {
     background: rgba(236, 0, 146, 1);
     opacity: 1;
+  }
+}
+.Outline {
+  border: 2px solid $primary-color;
+  background: transparent;
+  color: $primary-color;
+  &:hover {
+    color: $white;
   }
 }

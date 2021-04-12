@@ -4,6 +4,12 @@
   height: 100vh;
   width: 100%;
   position: relative;
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   &__content {
     width: 100%;
     position: absolute;
@@ -27,6 +33,12 @@
           font-size: 4.2rem;
         }
       }
+      &--narrow {
+        font-weight: 200;
+        h3 {
+          color: $black;
+        }
+      }
       & > h2 {
         font-family: $lemonMilk;
         font-size: 1.8rem;
@@ -38,6 +50,10 @@
           font-size: 4rem;
         }
       }
+    }
+    &__subtitle--black {
+      color: $black !important;
+      font-weight: 900 !important;
     }
     & > h3 {
       font-size: 1rem;
