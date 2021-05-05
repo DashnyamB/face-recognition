@@ -7,6 +7,7 @@ import bgImg from "../../assets/image/explore-bg.jpg";
 import "./style.scss";
 import axios from "axios";
 import { db } from "../../firebase";
+import { withRouter } from "react-router";
 const ExploreOurWorks = (props) => {
   const [datas, setDatas] = useState([]);
 
@@ -15,6 +16,10 @@ const ExploreOurWorks = (props) => {
       setDatas(snapshot.docs.map((doc) => doc.data()));
     });
   }, []);
+
+  const jumpToFilters = () => {
+    props.history.push("/filters");
+  };
 
   return (
     <section
@@ -26,21 +31,29 @@ const ExploreOurWorks = (props) => {
     >
       <h1 className="explore-our-works__title">explore our work</h1>
       <article className="explore-our-works__content">
-        {datas.map((data) => (
-          <ExploreWorkItem key={data.timestamp} post={data} />
+        {props.datas.map((data) => (
+          <ExploreWorkItem
+            path={`/filters/${data.id}`}
+            key={data.timestamp}
+            filter={data}
+          />
         ))}
       </article>
       {/* Button component */}
       <div className="explore-our-works__btn">
-        <Button text="Explore our work" />
+        <Button
+          onClick={jumpToFilters}
+          text="Explore our work"
+          type="outline"
+        />
       </div>
     </section>
   );
 };
 
-// const mapStateToProps = (state) => {
-//   return {
-//     kk: state.haha,
-//   };
-// };
-export default connect()(ExploreOurWorks);
+const mapStateToProps = (state) => {
+  return {
+    datas: state.filterReducer.filters,
+  };
+};
+export default connect(mapStateToProps)(withRouter(ExploreOurWorks));

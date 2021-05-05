@@ -9,6 +9,7 @@ import LargeHero from "../../Components/LargeHero";
 import MeetTeam from "../../Components/MeetTeam";
 import Navbar from "../../Components/Navbar";
 import WhatWeDo from "../../Components/WhatWeDo";
+import bg from "../../assets/image/largehero-bg.jpg";
 import "./style.scss";
 function HomePage({ userId }) {
   const navbarRef = useRef();
@@ -23,7 +24,11 @@ function HomePage({ userId }) {
       </div>
 
       <CoolMenu />
-      <LargeHero />
+      <LargeHero
+        bg={bg}
+        title="facial recognition"
+        subtitle="better performance - responsible - design and development"
+      />
       <AboutUs />
       <WhatWeDo />
       <ExploreOurWorks />

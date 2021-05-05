@@ -2,12 +2,14 @@ import { Route, Switch } from "react-router-dom";
 import LoginPage from "../LoginPage";
 import AdminPanel from "../AdminPanel";
 import HomePage from "../HomePage";
-import ForgotPassword from "../ForgotPasswordPage"
+import ForgotPassword from "../ForgotPasswordPage";
 import "./style.scss";
 import { useEffect } from "react";
 import fire from "../../firebase";
 import * as actions from "../../redux/actions/LoginRegisterAction";
 import { connect } from "react-redux";
+import FiltersPage from "../FiltersPage";
+import FilterPage from "../FilterPage";
 
 function App(props) {
   useEffect(async () => {
@@ -27,8 +29,10 @@ function App(props) {
       <Switch>
         <Route path="/panel" component={AdminPanel} />
         <Route path="/login" component={LoginPage} />
-        <Route path="/" exact component={HomePage} />
+        <Route path="/filters/:id" component={FilterPage} />
+        <Route path="/filters" component={FiltersPage} />
         <Route path="/forgot-password" component={ForgotPassword} />
+        <Route path="/" component={HomePage} />
       </Switch>
     </div>
   );
