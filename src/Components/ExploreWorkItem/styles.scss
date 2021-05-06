@@ -45,6 +45,9 @@
       animation: fade 0.5s;
       color: $white;
       font-size: 2rem;
+      font-family: $roboto;
+      font-weight: 700;
+      letter-spacing: 3px;
     }
   }
   &:hover &__overlay {

@@ -14,10 +14,10 @@ const AboutUs = () => {
       </h2>
       <p>
         We are inspired to build a website that uses four facial recognition,
-        such as filters on instagram{" "}
+        such as filters on instagram
       </p>
       <div className="about-us__button">
-        <Button text="about us" />
+        <Button type="outline" text="about us" />
       </div>
     </section>
   );

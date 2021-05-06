@@ -2,33 +2,26 @@ const initialState = {
   filters: [
     {
       id: 101,
-      name: "Face expression recognition",
+      name: "Нүүрний хувирал танилт",
       description:
         "This filter will say how you feeling now depending on your face expression ",
       media:
-        "https://user-images.githubusercontent.com/31125521/50575270-f501d080-0dfb-11e9-9676-8f419efdade4.png",
+        "https://firebasestorage.googleapis.com/v0/b/login-c6162.appspot.com/o/Base%20Files%2Fbackground-1-min.jpg?alt=media&token=9b9e382b-0ada-4295-8021-1a712ce30359",
     },
     {
       id: 102,
-      name: "Age Estimation & Gender Recognition",
+      name: "Нас болон хүйс танилт",
       description:
         "This filter will say your age and gender feeling now depending on your face",
       media:
-        "https://user-images.githubusercontent.com/31125521/57297736-b5603380-70d0-11e9-873d-8b6c7243eb64.jpg",
+        "https://firebasestorage.googleapis.com/v0/b/login-c6162.appspot.com/o/Base%20Files%2Fbackground-2-min.jpg?alt=media&token=30e33b62-98bb-4bdc-a008-1c19db9a117a",
     },
     {
       id: 103,
-      name: "Face Landmark Detection",
+      name: "Landmark",
       description: "This filter will detect face landmarks",
       media:
-        "https://user-images.githubusercontent.com/31125521/57297731-b1ccac80-70d0-11e9-9bd7-59d77f180322.jpg",
-    },
-    {
-      id: 104,
-      name: "Face Recognition",
-      description: "This filter will say who you are",
-      media:
-        "https://user-images.githubusercontent.com/31125521/57297377-bfcdfd80-70cf-11e9-8afa-2044cb167bff.gif",
+        "https://firebasestorage.googleapis.com/v0/b/login-c6162.appspot.com/o/Base%20Files%2Fbackground-3-min.jpg?alt=media&token=29449924-d4de-43b4-83d1-8081e8f29578",
     },
   ],
 };

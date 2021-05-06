@@ -1,13 +1,53 @@
 @import "../../css/style.scss";
 
 .filtera-page {
-  background-color: #000;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  position: relative;
+  & > h1 {
+    background-image: linear-gradient(#8100ed, #ec008c);
+    border-radius: 50px;
+    padding: 10px 25px;
+    position: absolute;
+    top: 10%;
+    font-family: $roboto;
+    color: $white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  & > article {
+    background-image: linear-gradient(#8100ed, #ec008c);
+    border-radius: 50px;
+    padding: 10px 25px;
+    position: absolute;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    & > h1 {
+      font-family: $roboto;
+      font-weight: 600;
+      color: $white;
+      font-size: 1.2rem;
+      line-height: 24px;
+    }
+    font-family: $uniSans;
+    color: $primary-color;
+
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  & > video {
+    border-radius: 20px;
+    width: 720px;
+    height: auto;
+    object-fit: contain;
+  }
   &__container {
     width: 90%;
     min-height: 90%;
@@ -73,14 +113,11 @@
     &__video {
       grid-area: video;
       width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
       height: auto;
-      background-color: aqua;
+      position: relative;
       justify-self: center;
-      & > video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
     }
   }
 }

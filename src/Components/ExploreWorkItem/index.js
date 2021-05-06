@@ -4,7 +4,6 @@ import "./styles.scss";
 const ExploreWorkItem = (props) => {
   return (
     <Link to={props.path}>
-      {props.path}
       <div className="explore-our-works__content__item">
         <figure className="explore-our-works__content__item__img">
           <img src={props.filter.media} alt={props.filter.name} />

@@ -5,7 +5,6 @@ import ExploreWorkItem from "../ExploreWorkItem";
 import bgImg from "../../assets/image/explore-bg.jpg";
 
 import "./style.scss";
-import axios from "axios";
 import { db } from "../../firebase";
 import { withRouter } from "react-router";
 const ExploreOurWorks = (props) => {

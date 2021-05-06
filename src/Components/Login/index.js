@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../../assets/video/Background.mp4";
+import video from "../../assets/video/Background.mp4";  
 import "../../css/style.scss";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

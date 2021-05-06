@@ -7,7 +7,6 @@ import "./style.scss";
 const Filters = (props) => {
   return (
     <section className="filters wrapper">
-      {console.log(props.filters)}
       {props.filters.map((filter) => {
         return (
           <article className="filters__item">
