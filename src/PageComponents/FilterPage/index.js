@@ -146,7 +146,7 @@ const FilterPage = (props) => {
   }
 
   return (
-    <section className="filtera-page" ref={videoContaiterRef} style={{backgroundImage: `url("${bg}")`, backgroundSize: "cover"}}>
+    <section className="filtera-page" ref={videoContaiterRef} style={{backgroundImage: `url("https://firebasestorage.googleapis.com/v0/b/login-c6162.appspot.com/o/Base%20Files%2FSubfilter-background-picture-min.jpg?alt=media&token=79b0260b-7978-4e40-9dfe-e461e129745b")`, backgroundSize: "cover"}}>
         <video
             ref={videoRef}
               id="filter__video"
