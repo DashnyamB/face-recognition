@@ -9,6 +9,10 @@ import { connect } from "react-redux";
 import HamburgerMenu from "../HamburgerMenu";
 
 function Navbar(props) {
+  const showMobileMenu = () => {
+    props.toggleMobileMenu();
+  }
+
   function showCoolMenu() {
     props.toggleCoolMenu();
   }
@@ -54,9 +58,9 @@ function Navbar(props) {
     <nav className="navbar active wrapper">
       <Logo />
       <div className="navbar__content">
-        <Menu refProp={props.refProp} references={props.references} />
+        {<Menu refProp={props.refProp} references={props.references} />}
         <div className="navbar__content__ham">
-          <HamburgerMenu onClick={showCoolMenu} />
+          <HamburgerMenu onClick={window.innerWidth < 800 ? showMobileMenu : showCoolMenu} />
           {/* <FontAwesomeIcon
             icon={faBars}
             style={{ color: "#fff", fontSize: "1.5rem" }}
@@ -70,12 +74,14 @@ function Navbar(props) {
 const mapStateToProps = (state) => {
   return {
     coolMenuShow: state.coolMenuReducer.coolMenuShow,
+    mobileMenuShow: state.coolMenuReducer.mobileMenuShow,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     toggleCoolMenu: () => dispatch(actions.toggleMenuShow()),
+    toggleMobileMenu: () => dispatch(actions.toggleMobileMenuShow()),
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

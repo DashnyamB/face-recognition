@@ -80,7 +80,7 @@ const CoolMenu = (props) => {
             </div>
             <div className="cool-menu__content__contact__phone">
               <h2 className="cool-menu__text">Phone</h2>
-              <p className="cool-menu__text">+976 99009900</p>
+              <p className="cool-menu__text">+976 91990388</p>
             </div>
           </div>
           <div className="cool-menu__content__menu">
