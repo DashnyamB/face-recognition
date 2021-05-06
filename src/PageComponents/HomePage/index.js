@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router";
 import AboutUs from "../../Components/AboutUs";
@@ -13,16 +13,23 @@ import bg from "../../assets/image/largehero-bg.jpg";
 import "./style.scss";
 function HomePage({ userId }) {
   const navbarRef = useRef();
+  const [refs, setRefs] = useState({})
+
+  const refHandler = (ref, name) => {
+    setRefs(prevState => ({
+      ...prevState,
+      [name]: ref.current
+    }));
+  }
+
   useEffect(() => {
-    return () => {};
-  }, []);
+  }, [refs]);
   return (
     <div>
       {!userId ? <Redirect to="/login" /> : ""}
       <div ref={navbarRef}>
-        <Navbar />
+        <Navbar ref={navbarRef} references={refs} />
       </div>
-
       <CoolMenu />
       <LargeHero
         bg={bg}
@@ -30,10 +37,10 @@ function HomePage({ userId }) {
         subtitle="better performance - responsible - design and development"
       />
       <AboutUs />
-      <WhatWeDo />
+      <WhatWeDo refHandler={refHandler}/>
       <ExploreOurWorks />
-      <MeetTeam />
-      <Footer />
+      <MeetTeam refHandler={refHandler} />
+      <Footer/>
     </div>
   );
 }

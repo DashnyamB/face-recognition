@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./style.scss";
-const MeetTeam = () => {
+const MeetTeam = (props) => {
+  useEffect(() => {
+    props.refHandler(teamRef, "team")
+  }, [])
+  const teamRef = useRef()
   return (
-    <section className="meet-team wrapper">
+    <section className="meet-team wrapper" ref={teamRef}>
       <article className="meet-team__content">
         <h1 className="meet-team__content__header">Meet The Team</h1>
         <h3>#TeamMatrix</h3>

@@ -87,7 +87,6 @@ const CoolMenu = (props) => {
             <h1 className="cool-menu__text">home</h1>
             <h1 className="cool-menu__text">Services</h1>
             <h1 className="cool-menu__text">Team</h1>
-            <h1 className="cool-menu__text">Contact us</h1>
           </div>
         </div>
       </div>

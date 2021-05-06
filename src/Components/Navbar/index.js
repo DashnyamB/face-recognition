@@ -18,9 +18,8 @@ function Navbar(props) {
     let currentY;
     if (navbar) {
       window.addEventListener("scroll", () => {
-        navbar.style.backgroundColor = `rgba(236, 0, 146, ${
-          window.scrollY / navbarBreakPoint
-        })`;
+        navbar.style.backgroundColor = `rgba(236, 0, 146, ${window.scrollY / navbarBreakPoint
+          })`;
         navbar.classList.toggle(
           "navbar--hide",
           window.scrollY > navbarBreakPoint
@@ -44,10 +43,10 @@ function Navbar(props) {
       });
     }
     return () => {
-      window.removeEventListener("scroll", () => {});
+      window.removeEventListener("scroll", () => { });
       if (navbar) {
-        navbar.removeEventListener("mouseout", () => {});
-        navbar.removeEventListener("mouseover", () => {});
+        navbar.removeEventListener("mouseout", () => { });
+        navbar.removeEventListener("mouseover", () => { });
       }
     };
   }, []);
@@ -55,7 +54,7 @@ function Navbar(props) {
     <nav className="navbar active wrapper">
       <Logo />
       <div className="navbar__content">
-        <Menu />
+        <Menu refProp={props.refProp} references={props.references} />
         <div className="navbar__content__ham">
           <HamburgerMenu onClick={showCoolMenu} />
           {/* <FontAwesomeIcon
