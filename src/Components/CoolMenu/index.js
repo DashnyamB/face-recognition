@@ -5,6 +5,7 @@ import bimg from "../../assets/image/cool-menu-background-2560x1600.jpg";
 import * as actions from "../../redux/actions/CoolMenuAction";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+
 const CoolMenu = (props) => {
   const toggleCoolMenu = () => {
     props.toggleCoolMenu();
@@ -86,7 +87,6 @@ const CoolMenu = (props) => {
             <h1 className="cool-menu__text">home</h1>
             <h1 className="cool-menu__text">Services</h1>
             <h1 className="cool-menu__text">Team</h1>
-            <h1 className="cool-menu__text">Contact us</h1>
           </div>
         </div>
       </div>

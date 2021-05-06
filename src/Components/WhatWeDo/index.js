@@ -1,6 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./style.scss";
-const WhatWeDo = () => {
+const WhatWeDo = (props) => {
+  useEffect(() => {
+    if (props.refHandler)
+      props.refHandler(services, "services")
+  }, [])
+  const services = useRef()
   const [contents, setContent] = useState([
     {
       name: "team plan",
@@ -34,7 +39,7 @@ const WhatWeDo = () => {
     },
   ]);
   return (
-    <section className="what-we-do wrapper">
+    <section className="what-we-do wrapper" ref={services}>
       <div className="what-we-do__horizontal-line"></div>
       <h1 className="what-we-do__header wrapper">What we do</h1>
       <div className="what-we-do__content wrapper">

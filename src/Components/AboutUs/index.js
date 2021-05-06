@@ -3,7 +3,7 @@ import Button from "../Button";
 import "./styles.scss";
 const AboutUs = () => {
   return (
-    <section className="about-us wrapper">
+    <section className="about-us wrapper" id="aboutusSection">
       <h1 className="about-us wrapper_header">
         We are complex of teamwork and creativity
       </h1>

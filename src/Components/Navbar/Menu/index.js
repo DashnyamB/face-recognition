@@ -6,16 +6,18 @@ import MenuItem from "../../MenuItem";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../../../redux/actions/LogOutActions";
-function Menu(props) {
-  const [menus, setMenu] = useState(["home", "services", "team", "contact us"]);
 
+function Menu(props) {
+  const [menus, setMenu] = useState(["services", "team"]);
   const handleLogout = () => {
     props.logout();
   };
   return (
     <div className="menuf">
+      {console.log(props.references)}
+      <MenuItem path="/" text="home" />
       {menus.map((menu) => {
-        return <MenuItem key={menu} text={menu} />;
+        return <MenuItem key={menu} text={menu} references={props.references[menu]} />;
       })}
       {props.userId ? <MenuItem path="/panel" text="Dashboard" /> : ""}
 
