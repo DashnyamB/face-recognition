@@ -1,6 +1,11 @@
+@import "../../../css/style.scss";
+
 .menuf {
-  display: flex;
+  display: none;
   align-items: center;
+  @include atMedium {
+    display: flex;
+  }
   & > div {
     width: auto;
     margin-left: 20px;

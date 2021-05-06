@@ -11,6 +11,7 @@ import Navbar from "../../Components/Navbar";
 import WhatWeDo from "../../Components/WhatWeDo";
 import bg from "../../assets/image/largehero-bg.jpg";
 import "./style.scss";
+import MobileMenu from "../../Components/MobileMenu";
 function HomePage({ userId }) {
   const navbarRef = useRef();
   const [refs, setRefs] = useState({})
@@ -31,16 +32,17 @@ function HomePage({ userId }) {
         <Navbar ref={navbarRef} references={refs} />
       </div>
       <CoolMenu />
+      <MobileMenu />
       <LargeHero
         bg={bg}
         title="facial recognition"
         subtitle="better performance - responsible - design and development"
       />
       <AboutUs />
-      <WhatWeDo refHandler={refHandler}/>
+      <WhatWeDo refHandler={refHandler} />
       <ExploreOurWorks />
       <MeetTeam refHandler={refHandler} />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

@@ -14,7 +14,6 @@ function Menu(props) {
   };
   return (
     <div className="menuf">
-      {console.log(props.references)}
       <MenuItem path="/" text="home" />
       {menus.map((menu) => {
         return <MenuItem key={menu} text={menu} references={props.references[menu]} />;
