@@ -20,7 +20,7 @@ const MeetTeam = (props) => {
           <p>Dashnyam Bayarsaikhan</p>
           <p>Sainzolboo Anujin</p>
           <p>Ganbayar Bayanmunkh</p>
-          <p>Gantug Gangerel</p>
+          <p>Gantug Batgerel</p>
         </div>
         <hr />
         <h3>#lifeatmatrix</h3>
